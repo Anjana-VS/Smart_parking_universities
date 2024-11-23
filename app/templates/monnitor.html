@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Parking Monitor</h1>
+<ul>
+    {% for slot in slots %}
+    <li>Slot {{ slot.slot_number }}: {% if slot.is_occupied %}Occupied{% else %}Available{% endif %}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
