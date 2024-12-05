@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parking Spot Reserved</title>
+</head>
+<body>
+    <h1>Parking Spot Reserved</h1>
+    <p>You have successfully reserved the parking spot: <strong>{{ spot.spot_name }}</strong>.</p>
+    <p>Location: {{ spot.latitude }}, {{ spot.longitude }}</p>
+    <a href="{% url 'available_parking' %}">Go back to available spots</a>
+</body>
+</html>

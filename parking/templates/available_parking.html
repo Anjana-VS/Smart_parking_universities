@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Parking Spots</title>
+</head>
+<body>
+    <h1>Available Parking Spots</h1>
+    <ul>
+        {% for spot in spots %}
+        <li>
+            <strong>{{ spot.spot_name }}</strong><br>
+            Location: {{ spot.latitude }}, {{ spot.longitude }}<br>
+            <a href="{% url 'reserve_parking' spot.id %}">Reserve this spot</a>
+        </li>
+        {% empty %}
+        <li>No available parking spots.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
