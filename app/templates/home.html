@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>Welcome to Smart Parking</h1>
-<form action="/allocate" method="POST">
-    <label for="license_plate">Enter License Plate:</label>
-    <input type="text" id="license_plate" name="license_plate" required>
-    <button type="submit">Find Parking</button>
-</form>
-{% endblock %}
